@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Katsute Hitotsu Datta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===== CAPA DA WEBNOVEL ===== */
+        .cover-wrapper {
+            margin: 20px auto;
+            width: 220px;
+            aspect-ratio: 3 / 4;
+            padding: 3px;
+            border-radius: 16px;
+            background: linear-gradient(
+                90deg,
+                transparent 40%,
+                #3aa9ff 50%,
+                transparent 60%
+            );
+            background-size: 300% 300%;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+
+        .cover-wrapper.active {
+            transform: scale(1.25);
+            animation: led-run 2s linear infinite;
+            z-index: 10;
+        }
+
+        .cover-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        @keyframes led-run {
+            0%   { background-position:   0% 50%; }
+            25%  { background-position: 100% 50%; }
+            50%  { background-position: 100% 100%; }
+            75%  { background-position:   0% 100%; }
+            100% { background-position:   0% 50%; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="background-animation">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</div>
+
+<nav class="glass-nav">
+    <div class="logo">✦ TOKI NO MAE</div>
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="obra.html">Capítulos</a></li>
+        <li><a href="cosmologia.html">Universo</a></li>
+        <li><a href="autor.html">Autor</a></li>
+        <li><a href="aviso.html">Avisos</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+
+    <span style="color:var(--accent-blue); letter-spacing:5px; font-size:0.7rem; margin-bottom: 10px;">
+        ISEKAI • SCI-FI • FANTASY • ROMANCE
+    </span>
+
+    <h1 class="novel-title">Katsute Hitotsu Datta</h1>
+
+    <div class="cover-wrapper" id="cover">
+        <img src="Artes/capa.jpg" alt="Capa da Webnovel Katsute Hitotsu Datta">
+    </div>
+
+    <p class="tagline">"Amar foi o primeiro erro da existência."</p>
+
+    <div class="status-container">
+        <div class="status-item">
+            <span class="label">Lançamento</span>
+            <span class="value">JAN 2026</span>
+        </div>
+        <div class="status-item">
+            <span class="label">Capítulos</span>
+            <span class="value">1 Ativo</span>
+        </div>
+        <div class="status-item">
+            <span class="label">Status</span>
+            <span class="value">Regular</span>
+        </div>
+    </div>
+
+    <a href="capitulos.html" class="btn-read">COMEÇAR LEITURA</a>
+
+</header>
+
+<main class="content-section">
+    <div class="parchment-card">
+        <h2>Sinopse da Obra</h2>
+        <p>
+            Antes do nada existir, a Entidade Primordial criou tudo. Dela nasceram a Entidade Suprema da Ordem
+            e a do Caos, que governaram a existência por eras. Entediadas com a eternidade, criaram uma única
+            alma e a dividiram em duas.
+        </p>
+        <p>
+            Ela nasceu em um mundo fantástico distópico, consumido por guerra e desespero. Ele tornou-se um
+            herói em um futuro tecnológico, onde um deus desconhecido concedeu poderes à humanidade.
+            Separados por realidades opostas, seus destinos colidem quando ele atravessa mundos, dando início
+            a uma jornada que desafia deuses, o destino e o próprio sentido da existência.
+        </p>
+    </div>
+</main>
+
+<script>
+    const cover = document.getElementById("cover");
+    cover.addEventListener("click", () => {
+        cover.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
